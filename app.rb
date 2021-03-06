@@ -7,7 +7,7 @@ class App < Sinatra::Base
     erb :index
   end
 
-  post '/piglatinize' do
+  post '/' do
   @analyzed_text = TextAnalyzer.new(params[:user_text])
   @words = @analyzed_text.count_of_words
   @vowels = @analyzed_text.count_of_vowels
